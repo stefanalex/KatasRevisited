@@ -38,4 +38,29 @@ public class MyLinkedList<T> {
 				
 	}
 	
+	
+	
+	public Node<T> deleteMiddle(Node<T> head) {
+		
+		if(head==null || head.getNext()==null)
+			   return head;
+		
+		
+		Node<T> slow=head;
+		Node<T> fast=head;
+		
+		Node<T> previous=null;
+		
+		while(fast!=null && fast.getNext()!=null) {
+			fast = (Node<T>) fast.getNext().getNext();  //two times
+			previous = slow;
+			slow = (Node<T>) slow.getNext();
+		}
+		
+		//delete middle now
+		previous.setNext(slow.getNext());
+		
+		return head;
+		
+	}
 }
