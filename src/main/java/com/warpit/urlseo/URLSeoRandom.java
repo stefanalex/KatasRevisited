@@ -13,6 +13,9 @@ public class URLSeoRandom extends URLSeo {
 	}
 
 	
+	//SEO = "XXXXXYYY";
+	//SEO
+	
 	public void setSeoKey(String seoKey) throws SeoValidationException {
 			seoKey = generate4LetterRandom(4);
 		}
@@ -23,7 +26,17 @@ public class URLSeoRandom extends URLSeo {
 		
 		HashMap mapOfValues= new HashMap<Integer, String>();
 		
-		Random randomGen = new Random();
+	//	Random randomGen = new Random();
+		
+	//	1-9
+	//	1-a
+	//	2-b
+	//	3-c
+	//	stream.
+		
+		
+	//	Random.nextInt
+		
 		return "XXCCXCC";
 		
 	}

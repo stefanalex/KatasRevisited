@@ -4,7 +4,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.function.IntPredicate;
 
-public class URLSeo {
+public class URLSeo { //rename
 	
 	private URL url;
 	private String seoKey;
@@ -19,6 +19,15 @@ public class URLSeo {
 		
 	}
 
+	
+	
+	public URLSeo(String seoKey) {
+		super();
+		this.seoKey = seoKey;
+	}
+
+
+
 	public URLSeo(URL url, String seoKey) throws Exception {
 		this.url = url;
 		if(seoKey.length()>20) throw new SeoValidationException();
@@ -27,11 +36,7 @@ public class URLSeo {
 		shortURL = new URL("http://short.com/");
 	}
 
-	public String getOutput() throws Exception {
-		URL newUrl = new URL(shortURL+seoKey);
-		return newUrl.toString();
-		
-	}
+
 
 	public String getSeoKey() {
 		return seoKey;
@@ -42,7 +47,19 @@ public class URLSeo {
 		if(seoKey.length()>20) throw new SeoValidationException();
 		this.seoKey = seoKey;
 	}
-
+	
+	
+	
+	
+	
+	public String getOutput() throws Exception {
+		URL newUrl = new URL(shortURL+seoKey);
+		return newUrl.toString();
+		
+	}
+	
+	
+	
 	
 	
 	
