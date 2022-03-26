@@ -1,9 +1,10 @@
-package com.warpit.arraystack.reversestream;
+package com.warpit.reversestring;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import com.warpit.reversestring.ReverseString;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
